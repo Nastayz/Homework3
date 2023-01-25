@@ -17,7 +17,9 @@ int getNumberFromUser(string message)
     {
         Console.WriteLine(message);
 
-        if(int.TryParse(Console.ReadLine(), out resultNumber) && (resultNumber <= 99999) && (resultNumber>=10000)) {
+        if (int.TryParse(Console.ReadLine(), out resultNumber) 
+            && (resultNumber <= 99999) 
+            && (resultNumber >= 10000)) {
             break;
         }
         else {
@@ -27,7 +29,7 @@ int getNumberFromUser(string message)
 
     return resultNumber;
 }
-int number=getNumberFromUser("Введите число пятизначное число:");
+int number = getNumberFromUser("Введите число пятизначное число:");
 //   N1  N2  N3  N4  N5
 //    1   2   3   2   9  - number
 
@@ -37,9 +39,9 @@ int N2 = (number/1000)%10 ;
 int N4 = (number/10)%10;
 int N5 = number%10;
 
-if (N1==N5 && N2==N4) {
+if (N1 == N5 && N2 == N4) {
     Console.WriteLine($"Число {number} является палиндромом");
 }
 else {
-    Console.WriteLine($"Число {number}  не является палиндромом");
+    Console.WriteLine($"Число {number} не является палиндромом");
 }
