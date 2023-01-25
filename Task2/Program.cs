@@ -24,16 +24,20 @@ int getQuarterFromUser(string message) {
     return result;
 }
 
-double getDistance(int ax, int ay, int az, int bx, int by, int bz) {
-    double result = Math.Sqrt(Math.Pow(ax-bx,2)+Math.Pow(ay-by,2)+Math.Pow(az-bz,2));
+double getDistance(int ax, int ay, int az, 
+                   int bx, int by, int bz) {
+    double result = Math.Sqrt( Math.Pow(ax-bx,2)
+                             + Math.Pow(ay-by,2)
+                             + Math.Pow(az-bz,2));
     return result;
 }
-int ax=getQuarterFromUser("Введите aх");
-int ay=getQuarterFromUser("Введите ay");
-int az=getQuarterFromUser("Введите az");
+int ax = getQuarterFromUser("Введите aх");
+int ay = getQuarterFromUser("Введите ay");
+int az = getQuarterFromUser("Введите az");
 
-int bx=getQuarterFromUser("Введите bх");
-int by=getQuarterFromUser("Введите by");
-int bz=getQuarterFromUser("Введите bz");
-double distance =getDistance(ax, ay, az, bx, by, bz);
-Console.WriteLine($"Расстояние между точками A({ax},{ay},{ay}) и B({bx},{by},{bz}) равно {distance:f2}");
+int bx = getQuarterFromUser("Введите bх");
+int by = getQuarterFromUser("Введите by");
+int bz = getQuarterFromUser("Введите bz");
+
+double distance = getDistance(ax, ay, az, bx, by, bz);
+Console.WriteLine($"Расстояние между точками A({ax},{ay},{az}) и B({bx},{by},{bz}) равно {distance:f2}");
